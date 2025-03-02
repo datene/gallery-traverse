@@ -1,7 +1,9 @@
 const input = document.querySelector('#input')
 const image = document.querySelector('#image')
 const previous = document.querySelector('#previous')
+const previousTen = document.querySelector('#previous-10')
 const next = document.querySelector('#next')
+const nextTen = document.querySelector('#next-10')
 const display = document.querySelector('#display')
 
 input.addEventListener('input', () => {
@@ -16,6 +18,14 @@ previous.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
   moveInGallery(1)
+})
+
+previousTen.addEventListener('click', () => {
+  moveInGallery(-10)
+})
+
+nextTen.addEventListener('click', () => {
+  moveInGallery(10)
 })
 
 const moveInGallery = (direction) => {
